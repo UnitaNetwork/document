@@ -1,0 +1,12 @@
+{
+    "title": "Unita Document",
+    "variables": {
+        "host": "doc.unita.network"
+    },
+    "plugins": [
+        "katex",
+        "-lunr",
+        "-search",
+        "search-pro"
+    ]
+}
