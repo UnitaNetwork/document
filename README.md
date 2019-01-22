@@ -3,5 +3,5 @@
 $ npm install gitbook-cli -g
 $ gitbook init
 $ gitbook serve
-$ gitbook build
+$ gitbook build . docs
 ```
