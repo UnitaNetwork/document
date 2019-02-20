@@ -2,7 +2,7 @@
 * [An Introduction to Unita](README.md)
 
 ## White Paper
-* [Unita White Paper](http://unita.network/asset/unita白皮书v5-1.9-1.pdf)
+* [Unita White Paper (pdf)](http://unita.network/asset/unita白皮书v5-1.9-1.pdf)
 
 ## Technical Paper
 * [SCAR: Scalable Consensus Algorithm](SCAR-Consensus/README.md)
@@ -12,4 +12,3 @@
 ## Tutorial
 * [Unita Quick Start]()
 * [Unita One-click Blockchain](One-Click-Launch-Chain/README.md)
-* [Build a Dapp based on Unita and IPFS]()
