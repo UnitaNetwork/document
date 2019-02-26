@@ -1,112 +1,110 @@
 # Canal：A Cross-chain Trading Solution
 
 # Background
-With the development of blockchain technology, many cryptocurrencies have emerged. These cryptocurrencies are recorded in their respective blockchain networks without data communication. Therefore, trading must be conducted by means of cryptocurrency exchanges. Traditional exchanges are mostly centralized services which are challenged in terms of security and privacy. Decentralized exchanges running on blockchains are receiving more and more attentions because of their data transparency, privacy protection, and real-time settlement.
+Many cryptocurrencies have emerged with the development of the blockchain technology. These cryptocurrencies are recorded in their respective blockchain network, without communication with each other. Therefore, trading of cryptocurrencies is mainly conducted by means of cryptocurrency exchanges. Most exchanges are based on centralized services which are often challenged by security and privacy. Nevertheless, decentralized exchanges running on blockchains are receiving more and more attentions because of their data transparency, privacy protection, and real-time settlement.
 
-Currently most decentralized exchanges realize
-tradings of tokens on the same blockchain, rather than cross-chain tradings, which limits application scenarios of decentralized exchanges. This paper proposes a decentralized cryptocurrency exchange solution that enables cross-chain cryptocurrency tradings.
+Currently most decentralized exchanges realize trading of tokens on the same blockchain, rather than cross-chain trading. It limits application scenarios of the decentralized exchange. This paper proposes a decentralized cryptocurrency exchange solution that enables cross-chain cryptocurrency trading. Here we only describe its basic idea and the design and development are still in process.
 
-We name this solution, **Canal**, because the canal realizes transportation and trading of goods among multiple cities. The original intention is that when a user launches his own blockchain using the [One-Click Blockchain](https://chain.unita.network) service, he can use this solution to exchange his cryptocurrency with other blockchains, so as to facilitate cryptocurrency circulation.
+We name this solution, **Canal**, because the canal realizes transportation and trading of goods among multiple cities. The original intention is that, after a user launches his own blockchain using the [One-Click Blockchain](https://chain.unita.network) service, he can use this solution to exchange his cryptocurrency with other blockchains, so as to facilitate cryptocurrency circulation.
 
 # Related Works
 ## Decentralized Exchange
 Currently decentralized exchanges can be divided into the following two types.
 
 ### Order Matching
-Decentralized exchanges, including 0x [1] and Kyber Network [2], are classified as the type of order matching. Users use smart contract to post buy and sell orders, and then the system matches these orders to make deals. This kind of decentralized exchange can be regarded as migrating the trading process of traditional centralized exchange to the blockchain, but the trading mechanism has not been changed.
+Decentralized exchanges, including 0x [1] and Kyber Network [2], are classified as the type of order matching. Users use smart contract to post buy and sell orders, and then the system matches these orders. This kind of decentralized exchange can be regarded as migrating the trading process of centralized exchange to the blockchain, but the trading mechanism has not been changed.
 
 This type has following advantages:
-1. Transparency: The buy and sell orders are completely public and the price is hard to manipulate;
-2. Security: The cryptocurrency is managed by smart contracts and is transferred to the user's account immediately when the orders are matched;
-3. Low costs: There are no other fee except for blockchain gas.
+1. Transparency: The buy and sell orders are completely public;
+2. Security: Cryptocurrency is managed by smart contracts and is transferred to users' account immediately when orders are matched;
+3. Low costs: There are no other fee except blockchain gas.
 
 And following disadvantages:
-1. Transactions are processed one by one, which slows down the trading process;
-2. When the market is inactive, it is difficult to reach a deal between buyer and seller, leading to weak liquidity.
+1. Transactions are processed on the blockchain, which slows down the trading process;
+2. When the market is inactive, it is hard to match orders between buyers and sellers, leading to weak liquidity.
 
 ### Automatic Pricing
 Bancor Network [3] realized automatic pricing between users and cryptocurrency liquidity pools. The trading process is as follows:
 
-1. The project launch a contract, and deposits a certain amount of cryptocurrency A and B into the contract as initial fund pools.
-2. When a user needs to change A to B, he first deposit A into the contract; then the contract calculates the conversion rate according to the amount of A, B in pools, and transfers corresponding amount of B to user's account.
-3. If users continuously change A to B, the amount of A in pool increases and B decreases, so that the conversion rate is lowered and the amount of B changed is reduced.
+1. Launch a contract, and deposit a certain amount of cryptocurrency A and B into the contract as initial fund pools.
+2. When a user needs to swap A for B, he first deposit A to the pool in the contract; then the contract calculates conversion rate according to amount of A, B in pools, and transfers corresponding amount of B to the user's account.
+3. If users continuously swap A for B, the amount of A in pool increases and B decreases, so that the conversion rate is lowered and the amount of B obtained is reduced.
 
 Advantages of automatic pricing are as follows:
-1. The project does not have to pay a huge amount of money to build a exchange pair.
-2. Users do not need to post buy or sell orders and can trading at any time.
-3. Ensure liquidity and users do not need to care about transaction depth.
+1. Do not need to pay a huge amount of money to build a trading pair.
+2. Users do not need to post any buy or sell and can trade with the pool at any time.
+3. Liquidity is ensured and users do not need to care about transaction depth.
 
 Disadvantages are as follows:
-1. A certain amount of cryptocurrency should be deposit to the system.
+1. A certain amount of cryptocurrency should be deposited to the system.
 2. Currently only support exchange of cryptocurrencies on the same blockchain.
 
 ## Cross-chain technology
-Blockchain networks can not commucate with each other,  which greatly limits application scenarios of blockchain. The cross-chain technology aims to solve this problem and achieve data transferring among blockchains. At present, cross-chain solutions only realize swap of tokens, but does not realize trading; that is, cryptocurrencies can only be swapped according to a pre-agreed conversion rate but not a price changes with the market. This deters the flow of cryptocurrency value and restricts application of cross-chain technology.
+Blockchain networks cannot communicate with each other, which greatly limits blockchain application scenarios. The cross-chain technology aims to solve this problem and achieve data transferring from one blockchain to another. Existing cross-chain solutions only realize swap of tokens, but does not realize trading; that is, cryptocurrencies can only be swapped according to a pre-determined conversion rate but not a price varies depending on the market. This deters liquidity of cryptocurrency and restricts application of cross-chain technology.
 
-Cross-chain technologies can be divided into two categories.
+Cross-chain solutions can be divided into two types.
 
-### Relay Transmission
+### Relay
 
-One type of cross-chain technology uses a main chain (sometimes called Hub or Relay) to connect side-chains, so as to achieve data transferring among side-chains. For example, Cosmos [4], Polkadot [5], etc., their basic ideas are generally the same:
+One type uses a main chain (sometimes called Hub or Relay) to connect side-chains, so as to achieve data transferring among side-chains. For example, Cosmos [4], Polkadot [5], etc., their basic ideas are generally the same:
 
-1. The main chain adopts a semi-decentralized consensus algorithm such as dPoS (Delegated Proof of Stake) or PoA (Proof of Authority), in which blocks are generated by a few super nodes, or may be called a consortium chain.
-2. Super nodes of the main chain monitor the data changes of the side chains, and then generate corresponding data in the main chain; or they monitor the change of the main chain data, and generate corresponding data in the side chains. Thereby, the interworking of the main chain and the side chain data is realized.
+1. The main chain adopts a semi-decentralized consensus algorithm like dPoS (Delegated Proof of Stake) or PoA (Proof of Authority)in which blocks are generated by a few super nodes, or it may be called a consortium chain.
+2. Super nodes of the main chain monitor data changes of side-chains and generate corresponding data in the main chain; or they monitor changes of the main chain, and generate corresponding data in side-chains. In this way, communication between the main chain and side-chains is realized.
 
-The advantage of this cross-chain mode is that data transmission is fast and efficient, and can transmit any form of data; the disadvantage is that it leads to centralization, because the accuracy of cross-chain data depends on the super nodes of the consortium blockchain.
+The advantage of this cross-chain mode is that the data transmission process is fast and efficient and it can transmit any form of data; the disadvantage is that it leads to centralization, because the accuracy and completeness of cross-chain data depend on those super nodes of the consortium blockchain.
 
 ### Atomic Swap
-Atomic swap [6] uses blockchain scripts to realize swap of cryptocurrencies on different blockchain networks in an atomic way. The "atomic" here means that two transactions posted by both parties of the swap must be completed or canceled simultaneously. The steps are as follows:
-1. Alice uses token A to exchange token B owned by Bob.
-2. Alice creates a transaction and pays A to an script which needs a secret key only known by Alice and Bob's signature to unlock.
-3. After Bob sees the transaction created by Alice, Bob also creates a transaction and pays B to an script that requires the same secret key and Alice's signature to unlock.
-4. Alice unlocks the transaction created by Bob with his secret key and signature, transferring B to his own address, and the secret key is recorded on the blockchain along with this operation.
+Atomic swap [6] uses blockchain scripts to realize swap of cryptocurrencies on different blockchain networks in an atomic way. The "atomic" here means two transactions posted by both parties of the swap must be completed or canceled simultaneously. The steps are as follows:
+1. Alice uses his token A to exchange token B owned by Bob.
+2. Alice creates a transaction to pay A to a script which needs a secret key only known by Alice and Bob's signature to unlock it.
+3. After Bob sees the transaction, Bob also creates a transaction to pay B to a script that requires the same secret key and Alice's signature to unlock it.
+4. Alice unlocks the transaction created by Bob with his secret key and signature, transferring B to his own address, and the secret key is uploaded to the blockchain with this operation.
 5. After Bob sees the secret key on the blockchain, Bob uses it and his signature to unlock the transaction created by Alice, transferring A to his address.
-6. If Alice or Bob quits during the process, A and B will return to Alice and Bob respectively after a certain time, and the swap fails.
+6. If Alice or Bob quits in the middle, A and B will return to Alice and Bob respectively after a certain time, and the swap fails.
 
-The advantage of this cross-chain solution is that it's completely decentralized, and the swap process doesn't rely on any third party. The disadvantage is that 4 transactions must be executed to complete the swap process, which is slow and inefficient.
+The advantage of this cross-chain solution is that it's completely decentralized, and the swap process doesn't rely on any third party. The disadvantage is that 4 transactions must be executed to complete a swap, which is slow and inefficient.
 
 # Algorithm Introduction
-This paper presents a decentralized cross-chain cryptocurrency exchange solution. The trading process is completed by a consortium blockchain network with multiple smart contracts. Take such a scenario as an example: cryptocurrency on sidechain A needs to be exchanged with the cryptocurrency on sidechain B. We complete the exchange through the main chain as a relay.
+This paper presents a decentralized cross-chain cryptocurrency trading solution. The trading process is completed by a consortium blockchain network with multiple smart contracts. Take such a scenario as an example: a cryptocurrency on side-chain A needs to be exchanged with another cryptocurrency on sidechain B. The trading process is completed through the main chain as a relay.
 
 ## Main Chain
-The main chain uses the consortium blockchain. Supernodes of the consortium blockchain are voted through all users or by any other methods. Supernodes are responsible for verifying all transactions on the blockchain and generating new blocks. The main chain connects to all sidechains that need to be traded, thus ensuring that data can be transmitted across chains. At the same time, the main chain is responsible for running the smart contracts required by cryptocurrency trading. A specific implementation will be described below. 
+The main chain uses a consortium blockchain. Super nodes of the consortium blockchain are voted through all users or by any other method. Super nodes are responsible for verifying all transactions on the blockchain and generating new blocks. The main chain connects to all side-chains that need to be traded, ensuring data can be transmitted among chains. Meanwhile, the main chain is responsible for running the required smart contracts. Details of this solution will be described below. 
 
 ## Cross-Chain
-The cross-chain part adopts the relay mode, which consists of two contracts, one is deployed on the main chain called the main contract, and the other is deployed on the side chain, called the sub-contract. The sub-contract is used for the user to deposit and withdraw tokens on the side chain, which is similar to the centralized exchange. The main contract is used to synchronize the user's charge and transaction records, and store the user's balance.
+The cross-chain part adopts the Relay type, which consists of two contracts. One is deployed on the main chain called the main contract and the other is deployed on the side chain called the sub-contract. The sub-contract is for users to deposit and withdraw tokens on the side-chain, as is similar to a centralized exchange. The main contract is used to synchronize users' transaction records and store their balances.
 
 The cross-chain steps are as follows:
-1. deposit 
-    1. Users deposit the crypto currency A to be redeemed into address of the sub-contract on sidechain A, and currency deposited may  be coin of blockchain itself, or may be the ERC20 token.
-    2. The supernodes listen to change in the number of currency A under the sub-contract address on sidechain A. After a certain number of blocks on the side chain A are confirmed, the corresponding number of tokens will be added to the user's address in main contract of on blockchain A.
-2. exchange
-    1. Users deposit tokens under their own address in the main contract 1 into the address of transaction contract.
-    2. The transaction contract transfers the converted digital currency B to the user address of the main contract B.
-3. withdraw
-    1. Users initiate a request of withdrawal to the sub-contract of sidechain B.
-    2. The supernodes listen to the request of withdrawal on sidechain B, and then detect whether there is a corresponding amount of tokens under user's address in the main contract B on main chain; if sufficient tokens are detected, the deduction is performed, and then transfers the corresponding number of digital currency B to the user's address on sidechain B.
+1. Deposit 
+    1. The user deposits cryptocurrency A to the sub-contract on side-chain A.
+    2. The super nodes detect change of balance in the sub-contract and then add corresponding amount of token to the user's address in the main contract.
+2. Trading
+    1. The user uses tokens in the main contract to request the trading API.
+    2. API transfers converted cryptocurrency B to user's address.
+3. Withdraw
+    1. The user request the sub-contract on side-chain B to start a withdrawal.
+    2. The super nodes detect the withdrawal request, and then destroy user's token in the main contract as well as transfer corresponding amount of B to the user on side-chain B.
 
-## Exchange
-The exchange uses an automatic pricing model consisting of a smart contract. When the contract is initialized, it needs to deposit a certain number of crypto currency A and B as a pool of funds to realize the transaction between A and B. This part of funds achieve dynamic conversion and balance in the users' continuous trading process.
+## Trading
+The trading process uses an automatic pricing model built on a smart contract. When the contract is initialized, a certain amount of cryptocurrency A and B are needed as fund pools to realize trading between A and B.
 
-The process of dynamic trading is as follows:
-1. Users want to convert a certain number of currency A into currency B.
-2. System calculates the number of currency B that can be converted according to the number of currency A to be converted and the stocks of A and B in the current fund pool.
-3. Users confirm the number of currency B that can be converted.
-4. Users deposit crypto currency A which need to be converted to the contract address and amount of currency A in fund pool increases.
-5. System transfers certain number of currency B from the fund pool to the user's address to complete the conversion transaction.
+The trading process is as follows:
+1. A user wants to convert a certain amount of cryptocurrency A into B.
+2. The user deposits A to the contract and the amount of A in fund pool increases.
+3. Contract calculates the amount of B that can be converted according to the amount of A and the balance of A and B in current fund pool.
+4. System transfers obtained amount of B from the fund pool to the user's address.
 
-The conversion calculation in step 2 needs to follow the following principles:
-1. The less A in the fund pool, the higher the conversion rate of A to B, the more A, the lower the conversion rate. And it's same for B.
-2. Any crypto currencies in the pool can not be used up, otherwise there will be unable to continue the conversion.
+The conversion in step 2 needs to follow the following principles:
+1. The less A in the fund pool, the higher the conversion rate from A to B. And it's the same for B.
+2. Any cryptocurrencies in the pool can not be used up, otherwise there will be unable to continue the conversion.
 
-Based on the above principles, the computational logic of the conversion can be of various designs, and a relatively simple formula is given here.
-1. Assume that the stocks of the crypto currency A and B in the fund pool are a0 and b0 respectively (a0 > 0, b0 > 0), and users want to convert the currency A of Δa (Δa > 0) to obtain Δb (Δb > 0) of currency B.
-2. The number of currency B that can be converted to is: Δb = ( b0 * Δa ) / (a0 + Δa).
-3. It can be seen that Δb is an increasing function of b0 and is a decreasing function of a0, which is in accordance with principle 1.
-4. It also can be seen that △b < b0, the currency B in the fund pool will not be used up,which is in accordance with principle 2.
+Based on the principles above, the logic of the conversion can have various designs. For example:
+1. Assume that the balances of the cryptocurrency A and B in the fund pool are a0 and b0 respectively (a0 > 0, b0 > 0), and users want to convert A of amount Δa (Δa > 0) to obtain B of Δb (Δb > 0).
+2. Then the amount of B that can be converted to is: Δb = ( b0 * Δa ) / (a0 + Δa).
+3. It can be seen that Δb is an increasing function of b0 and is a decreasing function of a0, which is in accordance with above principle 1.
+4. It also can be seen that △b < b0, the currency B in the fund pool will not be used up, which is in accordance with above principle 2.
 
 # Summary
-In the process of design, we got two thoughts. First, we realize that we shouldn't over-emphasize decentralization and sacrifice the efficiency of the transaction; because if speed of transaction is too slow in actual use of this system,  it will affect the user experience; and the need of decentralization in a consortium blockchain system can also be satisfied through voting for trusted supernodes. Second, the mode of automatic pricing transactions is significantly better than pending orders in actual use, because many new crypto currency trading volume liquidity cannot be guaranteed, and the automatic pricing trading model solves problem of low liquidity well.
+In the design process, we got two thoughts. First, we realize that we shouldn't over-emphasize decentralization and sacrifice the efficiency of the trading process; because if the trading process is too slow, it will affect the user experience; and the need of decentralization in a consortium blockchain system can also be satisfied through voting for trusted super nodes. Second, the mode of automatic pricing is significantly better than order matching in actual usage, because for many new cryptocurrencies, the trading liquidity cannot be guaranteed, and the automatic pricing trading model effectively solves this problem.
 
 # References
 
