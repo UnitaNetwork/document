@@ -2,7 +2,7 @@
 * [Unita 介绍](README.md)
 
 ## 白皮书
-* [Unita 白皮书 (pdf)](http://unita.network/asset/unita白皮书v5-1.9-1.pdf)
+* [Unita 白皮书 (pdf)](ref://zh/Whitepaper/unita白皮书.pdf)
 
 ## 技术文档
 * [SCAR：一种可伸缩共识算法](SCAR-Consensus/README.md)

@@ -2,7 +2,7 @@
 * [An Introduction to Unita](README.md)
 
 ## White Paper
-* [Unita White Paper (pdf)](http://unita.network/asset/unita白皮书v5-1.9-1.pdf)
+* [Unita White Paper (pdf)](ref://en/Whitepaper/unita_whitepaper.pdf)
 
 ## Technical Paper
 * [SCAR: Scalable Consensus Algorithm](SCAR-Consensus/README.md)
