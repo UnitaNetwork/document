@@ -1,5 +1,5 @@
 ## Introduction
-* [An Introduction to Unita](README.md)
+* [Unita Introduction](README.md)
 
 ## White Paper
 * [Unita White Paper (pdf)](ref://en/Whitepaper/unita_whitepaper.pdf)
