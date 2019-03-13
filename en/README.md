@@ -1,7 +1,7 @@
 # Unita Introduction
 
 ## What is Unita
-Unita is an enterprise blockchain solution. It's featured of high TPS (Transactions Per Second) and low transaction confirmation time, to make DApps (Decentralized Applications) applicable to more business scenarios. Meanwhile, by using a consensus algorithm named [SCAR](SCAR-Consensus) (Scalable Consensus Algorithm), storage and network consumption are minimized, so as to reduce operating costs. It’s developed on the basis of the open-source project, [Qtum](https://github.com/qtumproject/qtum), which is compatible with the Bitcoin UTXO data structure and Ethereum Solidity smart contracts.
+Unita is an enterprise blockchain solution. It's featured of high TPS (Transactions Per Second) and low transaction confirmation time, to make DApps (Decentralized Applications) applicable to more business scenarios. Meanwhile, by using a consensus algorithm named [SCAR](./SCAR-Consensus) (Scalable Consensus Algorithm), storage and network consumption are minimized, so as to reduce operating costs. It’s developed on the basis of the open-source project, [Qtum](https://github.com/qtumproject/qtum), which is compatible with the Bitcoin UTXO data structure and Ethereum Solidity smart contracts.
 
 ## Resource
 Tool: [Homepage](https://unita.network), [Stats](https://stats.unita.network), [Explorer](https://explorer.unita.network), [Faucet](https://faucet.unita.network), [One-click Blockchain](https://chain.unita.network).
