@@ -5,18 +5,11 @@ Unita 以联盟链为基础，构建一主链多侧链的系统架构，结合�
 
 我们提供了 Unita 全节点钱包、水龙头领币、区块浏览器和区块链状态显示等服务，帮助您更好地使用 Unita 。
 
-Unita 相应服务链接如下：
+Unita 相应资源如下：
 
-Unita 主页：https://unita.network/
+工具：[主页](https://unita.network)、[钱包下载](https://github.com/zsrem/unitaprerelease/releases)、[网络状态](https://stats.unita.network)、[浏览器](https://explorer.unita.network)、[测试币申领](https://faucet.unita.network)、[一键发链](https://chain.unita.network)。
 
-Unita qt钱包下载地址：https://github.com/zsrem/unitaprerelease/releases
-
-Unita 一键发链：https://chain.unita.network/
-
-Unita 水龙头：https://faucet.unita.network/
-
-Unita 状态显示：https://stats.unita.network/
-
+文档：[English](../en/)、[中文](../zh/)。
 
 ## 目录
 

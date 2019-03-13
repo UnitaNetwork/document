@@ -258,24 +258,20 @@
                                 
                                 <h1 id="unita-quick-start">Unita Quick Start</h1>
 <p>Unita is the blockchain service provider based on open source project Qtum, provides enterprise application solutions that can be customized in various industries.</p>
-<p>Unita is based on consortium blockchain, builds a main chain with many side-chains system architecture, integrate one-click-blockchain, cross-chain transaction, data management and other modules and diversified supporting tools to form a one-stop blockchain enterprise service</p>
+<p>Unita is based on consortium blockchain, builds a main chain with many side-chains system architecture, integrate one-click-blockchain, cross-chain transaction, data management and other modules and diversified supporting tools to form a one-stop blockchain enterprise service.</p>
 <p>We provide various services such as Unita full node wallet, faucet to get airdrop of UNT, blockchain explorer and blockchain stats,etc, to help you to use Unita.</p>
 <p>Unita URLs are as follws&#xFF1A;</p>
-<p>Unita Homepage&#xFF1A;<a href="https://unita.network/" target="_blank">https://unita.network/</a></p>
-<p>Unita Qt-wallet download&#xFF1A;<a href="https://github.com/zsrem/unitaprerelease/releases" target="_blank">https://github.com/zsrem/unitaprerelease/releases</a></p>
-<p>Unita One-Click-Blockchain&#xFF1A;<a href="https://chain.unita.network/" target="_blank">https://chain.unita.network/</a></p>
-<p>Unita Faucet&#xFF1A;<a href="https://faucet.unita.network/" target="_blank">https://faucet.unita.network/</a></p>
-<p>Unita Stats&#xFF1A;<a href="https://stats.unita.network/" target="_blank">https://stats.unita.network/</a></p>
+<p>Toolkits: <a href="https://unita.network" target="_blank">Homepage</a>, <a href="https://github.com/zsrem/unitaprerelease/releases" target="_blank">Qt-wallet download</a>, <a href="https://stats.unita.network" target="_blank">Stats</a>, <a href="https://explorer.unita.network" target="_blank">Explorer</a>, <a href="https://faucet.unita.network" target="_blank">Faucet</a>, <a href="https://chain.unita.network" target="_blank">One-click Blockchain</a>.</p>
+<p>Docs: <a href="../en">English</a>, <a href="../zh">Chinese</a>.</p>
 <h2 id="contents">Contents</h2>
 <ul>
-<li><a href="###Download-full-node-wallet">Download</a></li>
-<li><a href="###run-wallet">Run Wallet</a></li>
-<li><a href="###send-transaction">Send Transactiom</a><ul>
-<li><a href="####My-Wallet">Main Interface</a></li>
-<li><a href="####Send">Transaction</a></li>
-</ul>
-</li>
-<li><a href="###Get-Airdrop-through-Faucet">Get UNT through faucet</a></li>
+<li><a href="###Download%20full%20node%20wallet">Download</a></li>
+<li><a href="###Run%20Wallet">Run Wallet</a></li>
+<li><a href="###Use%20Wallet">Use Wallet</a></li>
+<li><a href="###Get%20Airdrop%20through%20Faucet">Get UNT through faucet</a></li>
+<li><a href="###Blockchain%20Explorer">Check transactions in Unita Explorer</a></li>
+<li><a href="###Unita%20Blockchain%20Stats">View Stats of Unita network</a></li>
+<li><a href="###Send%20Transactions">Send Transactions</a></li>
 </ul>
 <h3 id="download-full-node-wallet">Download full node wallet</h3>
 <p>Find the latest release in <a href="https://github.com/zsrem/unitaprerelease/releases" target="_blank">Github</a> and download wallet according to your device.</p>
@@ -283,14 +279,14 @@
 <h3 id="run-wallet">Run Wallet</h3>
 <p>Install the full node wallet and run it after downloaded. It will display window as picture below if there is no full node data existed, and then you should choose blockchain data path. You can use the defult path or custom it.</p>
 <p><img src="2.png" alt="image"></p>
-<p>Click &apos;OK&apos; to enter the main interface of qt wallet. Wallet will connect nodes of Unita main network and download data of Unita blockchain in defult. You can also change chainId in &apos;Preference&apos;(Mac users) to connect other blockchain network launched in &apos;One-Click-Blockchian&apos;.(See mor details in &apos;<a href="https://doc.unita.network/zh/One-Click-Launch-Chain/" target="_blank">One-Click-Launch-Chain</a>&apos;)  </p>
+<p>Click &apos;OK&apos; to enter the main interface of qt wallet. Wallet will connect nodes of Unita main network and download data of Unita blockchain in defult. You can also change chainId in &apos;Preference&apos;(Mac users) to connect other blockchain network launched in &apos;One-Click-Blockchian&apos;.(See mor details in &apos;<a href="https://doc.unita.network/zh/One-Click-Launch-Chain/" target="_blank">One-Click-Launch-Chain</a>&apos;).</p>
 <p><img src="3.png" alt="image"></p>
-<h3 id="send-transaction">Send Transaction</h3>
+<h3 id="use-wallet">Use Wallet</h3>
 <p>If you own the privatekey of an Unita address with UNT, you can open Console in Help/Debug Window and input command &quot;importprivkey &apos;unitaprivkey&apos;&quot; to import your address in wallet.</p>
 <p><img src="4.png" alt="image"></p>
-<p>If not, maybe you should get an Unita address by command &quot;getnewaddress&quot;. You can export privatekey by command &quot;dumpprivkey &apos;unitaaddress&apos;&quot; after you have got a new address.</p>
-<h4 id="my-wallet">My Wallet</h4>
-<p>Wallet will display some information such as balances in main interface:</p>
+<p>If not, maybe you should get an Unita address by &apos;REQUEST PAYMENT&apos; button in Recieve page or by command &quot;getnewaddress&quot;. You can export privatekey by command &quot;dumpprivkey &apos;unitaaddress&apos;&quot; after you have got a new address.
+<img src="13.png" alt="image"></p>
+<p>Then, QT wallet will display some information such as balances in main interface:</p>
 <ol>
 <li>Balances</li>
 <li>Avaliable balance</li>
@@ -300,7 +296,38 @@
 <li>Recent Transaction</li>
 </ol>
 <p><img src="5.png" alt="image"></p>
-<h4 id="send">Send</h4>
+<h3 id="get-airdrop-through-faucet">Get Airdrop through Faucet</h3>
+<p>Enter <a href="https://faucet.unita.network/" target="_blank">Unita Faucet</a> homepage.</p>
+<p><img src="8.png" alt="image"></p>
+<p>Unita Faucet airdrops UNT by verifying Twitter or Sina Weibo, and process is following:</p>
+<ol>
+<li>Choose a social network to login</li>
+<li>Follow the example below to publish content(Twitter content is &apos;#Unita +UnitaAddress&apos;, Sina Weibo content is &apos;#Unita# +UnitaAddress&apos;)</li>
+<li>Copy content URL to the form above and click &quot;Get Unita&quot;</li>
+<li>Watch the in process transaction list below and wait</li>
+</ol>
+<p>Let&apos;s take Twitter as an example.
+Log in your twitter account in <a href="https://mobile.twitter.com&#xFF08;https://mobile.twitter.com/" target="_blank">https://mobile.twitter.com&#xFF08;https://mobile.twitter.com/</a> is Html5 version of Twitter, please use it so that you can get correct URL to get airdrop&#xFF09;.</p>
+<p><img src="9.png" alt="image"></p>
+<p>Follow the example in Faucet page to publish content including your Unita address.</p>
+<p><img src="10.png" alt="image"></p>
+<p>Copy URL of twitter you had published which included content example.</p>
+<p><img src="11.png" alt="image"></p>
+<p>Paste content URL to the form above and click &quot;Get Unita&quot;, then watch the in process transaction list below and wait&#xFF08;Correct form of URL is <a href="https://mobile.twitter.com/${name}/status/${id}&#xFF09;" target="_blank">https://mobile.twitter.com/${name}/status/${id}&#xFF09;</a>.</p>
+<p>You will get UNT by Sina Weibo in the same way. </p>
+<p>Notice: In order to prevent the malicious over-application of UNT, we adopted the verification of social media plus verification code, and limited the number of applications. Each time a successful application will receive 50 UNTs, and a social media account can only apply once within 24 hours. Meanwhile, we allow the same Unita address to be claimed through different social accounts.</p>
+<h3 id="blockchain-explorer">Blockchain Explorer</h3>
+<p>Then, you have got UNT and you can watch status of your Unita addresses and details of transactions in blockchain in <a href="https://explorer.unita.network/" target="_blank">Explorer page</a>.
+<img src="14.png" alt="image"></p>
+<p>Input Unita address in which you got airdrop of UNT in search field, then you will find transaction of recieving UNT in research results.
+<img src="15.png" alt="image"></p>
+<p>Meanwhile, you can watch detail information of each block and tokens launched through smart contracts in Unita Explorer. You will get balance ranking of UNT and stats of miner addresses, even you can send transactions through &quot;Send Raw Transaction&quot; in explorer.
+<img src="16.png" alt="image"></p>
+<h3 id="unita-blockchain-stats">Unita Blockchain Stats</h3>
+<p>You can view stats and status of Unita main network in <a href="https://stats.unita.network/" target="_blank">Stats page</a>, which includes best block height, best block size, TPS and so on. Status of Supernodes in Unita network is also available. 
+<img src="17.png" alt="image"></p>
+<p><img src="18.jpeg" alt="image"></p>
+<h3 id="send-transactions">Send Transactions</h3>
 <p>You can send transaction on the Send menu to realize to send certain number of UNTs to Unita address.</p>
 <p><img src="6.png" alt="image"></p>
 <p>Pay To: Here we&#x2019;ll enter the address we want to send UNT to (Only Unita ignition addresses will work).</p>
@@ -308,27 +335,6 @@
 <p>Amount: Here we enter the amount of UNT we want to send.</p>
 <p>Once all fields are covered, we can click on the &#x201C;Send&#x201D; button and the UNT coins will be sent to the address we entered above.</p>
 <p><img src="7.png" alt="image"></p>
-<h3 id="get-airdrop-through-faucet">Get Airdrop through Faucet</h3>
-<p>Enter <a href="https://faucet.unita.network/" target="_blank">Unita Faucet</a> homepage.</p>
-<p><img src="8.png" alt="image"></p>
-<p>Unita Faucet airdrop UNT by verifying Twitter or Sina Weibo, and process is following:</p>
-<ol>
-<li>Choose a social network to login</li>
-<li>Follow the example below to publish content(Twitter content is &apos;#Unita +UnitaAddress&apos;, Sina Weibo content is &apos;#Unita# +UnitaAddress&apos;)</li>
-<li>Copy content URL to the form above and click &quot;Get Unita&quot;</li>
-<li>Watch the in process transaction list below and wait</li>
-</ol>
-<p>&#x6211;&#x4EEC;&#x4EE5;&#x65B0;&#x6D6A;&#x5FAE;&#x535A;&#x4E3A;&#x4F8B;&#x5B9E;&#x9645;&#x64CD;&#x4F5C;&#x3002;
-&#x5728; <a href="https://m.weibo.cn/" target="_blank">https://m.weibo.cn/</a> &#x4E2D;&#x767B;&#x5F55;&#x5FAE;&#x535A;&#x8D26;&#x53F7; &#xFF08;<a href="https://m.weibo.cn/&#x662F;&#x5FAE;&#x535A;&#x7684;Html5&#x7248;&#xFF0C;&#x4FBF;&#x4E8E;&#x60A8;&#x83B7;&#x53D6;&#x5230;&#x6B63;&#x786E;&#x7684;&#x5FAE;&#x535A;&#x94FE;&#x63A5;&#xFF09;" target="_blank">https://m.weibo.cn/&#x662F;&#x5FAE;&#x535A;&#x7684;Html5&#x7248;&#xFF0C;&#x4FBF;&#x4E8E;&#x60A8;&#x83B7;&#x53D6;&#x5230;&#x6B63;&#x786E;&#x7684;&#x5FAE;&#x535A;&#x94FE;&#x63A5;&#xFF09;</a></p>
-<p><img src="9.png" alt="image"></p>
-<p>&#x767B;&#x5F55;&#x540E;&#x6839;&#x636E;&#x5FAE;&#x535A;&#x5185;&#x5BB9;&#x8981;&#x6C42;&#x53D1;&#x5E03;&#x5BF9;&#x5E94;&#x8BDD;&#x9898;&#x548C;&#x5730;&#x5740;</p>
-<p><img src="10.png" alt="image"></p>
-<p>&#x53D1;&#x5E03;&#x5B8C;&#x6210;&#x540E;&#x8FDB;&#x5165;&#x5230;&#x81EA;&#x5DF1;&#x7684;&#x4E3B;&#x9875;&#x627E;&#x5230;&#x53D1;&#x5E03;&#x540E;&#x7684;&#x90A3;&#x6761;&#x5FAE;&#x535A;&#xFF0C;&#x590D;&#x5236;&#x94FE;&#x63A5;</p>
-<p><img src="11.png" alt="image"></p>
-<p><img src="12.png" alt="image"></p>
-<p>&#x5C06;&#x83B7;&#x53D6;&#x7684;&#x94FE;&#x63A5;&#x7C98;&#x8D34;&#x5165;&#x6C34;&#x9F99;&#x5934;&#x7684;&#x8F93;&#x5165;&#x6846;&#x4E2D;&#xFF0C;&#x5B8C;&#x6210;&#x9A8C;&#x8BC1;&#x7801;&#x9A8C;&#x8BC1;&#xFF0C;&#x7B49;&#x5F85;&#x786E;&#x8BA4;&#xFF08;&#x83B7;&#x5F97;&#x7684;&#x94FE;&#x63A5;&#x5E94;&#x662F; <a href="https://m.weibo.cn/detail/${id}" target="_blank">https://m.weibo.cn/detail/${id}</a> &#x683C;&#x5F0F;&#xFF09;</p>
-<p>Twitter &#x7528;&#x6237;&#x64CD;&#x4F5C;&#x4E0E;&#x5FAE;&#x535A;&#x76F8;&#x540C;</p>
-<p>&#x6CE8;&#x610F;&#xFF1A;&#x4E3A;&#x4E86;&#x9632;&#x6B62; UNT &#x7684;&#x6076;&#x610F;&#x8FC7;&#x5EA6;&#x7533;&#x9886;&#xFF0C;&#x6211;&#x4EEC;&#x91C7;&#x53D6;&#x4E86;&#x793E;&#x4EA4;&#x5A92;&#x4F53;&#x52A0;&#x9A8C;&#x8BC1;&#x7801;&#x7684;&#x9A8C;&#x8BC1;&#x6A21;&#x5F0F;&#xFF0C;&#x540C;&#x65F6;&#x9650;&#x5236;&#x4E86;&#x7533;&#x9886;&#x6570;&#x91CF;&#xFF0C;&#x6BCF;&#x6B21;&#x7533;&#x9886;&#x6210;&#x529F;&#x4F1A;&#x83B7;&#x5F97;50&#x679A; UNT&#xFF0C;&#x4E00;&#x4E2A;&#x793E;&#x4EA4;&#x5A92;&#x4F53;&#x8D26;&#x53F7;&#x5728;24&#x5C0F;&#x65F6;&#x5185;&#x53EA;&#x80FD;&#x7533;&#x9886;&#x4E00;&#x6B21;&#xFF0C;&#x4F46;&#x5141;&#x8BB8;&#x540C;&#x4E00;&#x4E2A; Unita &#x5730;&#x5740;&#x901A;&#x8FC7;&#x4E0D;&#x540C;&#x7684;&#x793E;&#x4EA4;&#x8D26;&#x53F7;&#x7533;&#x9886;&#x3002;</p>
 
                                 
                             </section>
@@ -373,7 +379,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function () {
-            gitbook.page.hasChanged({"page":{"title":"Unita Quick Start","level":"4.1","depth":1,"next":{"title":"Unita One-click Blockchain","level":"4.2","depth":1,"path":"One-Click-Launch-Chain/README.md","ref":"One-Click-Launch-Chain/README.md","articles":[]},"previous":{"title":"DDAO: Decentralized Data Access Object","level":"3.3","depth":1,"path":"DDAO-Data-Management/README.md","ref":"DDAO-Data-Management/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","-lunr","-search","search-pro","otherlink"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"katex":{},"search-pro":{},"otherlink":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"host":"doc.unita.network"},"title":"Unita Document","language":"en","gitbook":"*"},"file":{"path":"Unita-Quick-Start/README.md","mtime":"2019-03-13T03:06:17.579Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-13T08:34:18.249Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Unita Quick Start","level":"4.1","depth":1,"next":{"title":"Unita One-click Blockchain","level":"4.2","depth":1,"path":"One-Click-Launch-Chain/README.md","ref":"One-Click-Launch-Chain/README.md","articles":[]},"previous":{"title":"DDAO: Decentralized Data Access Object","level":"3.3","depth":1,"path":"DDAO-Data-Management/README.md","ref":"DDAO-Data-Management/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","-lunr","-search","search-pro","otherlink"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"katex":{},"search-pro":{},"otherlink":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"host":"doc.unita.network"},"title":"Unita Document","language":"en","gitbook":"*"},"file":{"path":"Unita-Quick-Start/README.md","mtime":"2019-03-13T08:39:09.698Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-13T08:39:30.759Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
