@@ -7,7 +7,7 @@ We provide various services such as Unita full node wallet, faucet to get airdro
 
 Unita URLs are as follws：
 
-Toolkits: [Homepage](https://unita.network), [Qt-wallet download](https://github.com/zsrem/unitaprerelease/releases), [Stats](https://stats.unita.network), [Explorer](https://explorer.unita.network), [Faucet](https://faucet.unita.network), [One-click Blockchain](https://chain.unita.network).
+Toolkits: [Homepage](https://unita.network), [Qt-wallet download](https://github.com/UnitaNetwork/unita/releases), [Stats](https://stats.unita.network), [Explorer](https://explorer.unita.network), [Faucet](https://faucet.unita.network), [One-click Blockchain](https://chain.unita.network).
 
 Document: [English](https://doc.unita.network/en/), [中文](https://doc.unita.network/zh/).
 
@@ -16,7 +16,7 @@ Document: [English](https://doc.unita.network/en/), [中文](https://doc.unita.n
 - [Download](###Download full node wallet)
 - [Run Wallet](###Run Wallet)
 - [Use Wallet](###Use Wallet)
-- [Get UNT through faucet](###Get Airdrop through Faucet)
+- [Get UNT through faucet](###Faucet)
 - [Check transactions in Unita Explorer](###Blockchain Explorer)
 - [View Stats of Unita network](###Unita Blockchain Stats)
 - [Send Transactions](###Send Transactions)
@@ -24,7 +24,7 @@ Document: [English](https://doc.unita.network/en/), [中文](https://doc.unita.n
 
 ### Download full node wallet
 
-Find the latest release in [Github](https://github.com/zsrem/unitaprerelease/releases) and download wallet according to your device.
+Find the latest release in [Github](https://github.com/UnitaNetwork/unita/releases) and download wallet according to your device.
 
 ![image](1.png)
 
@@ -57,7 +57,7 @@ Then, QT wallet will display some information such as balances in main interface
 
 ![image](5.png)
 
-### Get Airdrop through Faucet
+### Faucet
 
 Enter [Unita Faucet](https://faucet.unita.network/) homepage.
 

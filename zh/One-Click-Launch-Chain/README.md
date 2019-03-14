@@ -16,7 +16,7 @@
     - [修改系统参数](#修改系统参数)
 
 # 下载
-从[Github](https://github.com/zsrem/unitaprerelease/releases)下载最新的安装包，安装至任意目录。
+从[Github](https://github.com/UnitaNetwork/unita/releases)下载最新的安装包，安装至任意目录。
 
 # 注册登录
 1. 运行unitad或者unita-qt，启动Unita主链。
@@ -51,10 +51,16 @@
 我们生成了一个名为xunita的链（[链接](https://chain.unita.network/#/chain/view?chainId=xunita)），按以下步骤启动该链。
 1. 使用 unitad -chain=x 或是 在unita-qt中如下图配置重启后，启动名为xunita的链。
 ![image](3.png)
-1. 执行getpoaminerlist，查看矿工列表。
-2. 执行importprivkey命令，导入矿工的私钥。
-3. 执行setpoaminer命令，开始使用矿工账户挖矿。每次节点重启后需要运行该命令开启挖矿。
+2. 执行getpoaminerlist，查看矿工列表。
+3. 执行importprivkey命令，导入矿工的私钥。
+4. 执行setpoaminer命令，开始使用矿工账户挖矿。每次节点重启后需要运行该命令开启挖矿。setpoaminer命令支持选择共识机制（[SCAR共识机制](https://doc.unita.network/zh/SCAR-Consensus/）):
+```
+setpoaminer "address" "greedy"or null  // 采用PoA共识算法
+setpoaminer "address" "scar" // 采用SCAR共识算法
+```
 ![image](4.png)
+
+![image](17.png)
 5. 可以从QT钱包或是执行getblockchaininfo命令，看到block数在不断增加。
 ![image](5.png)
 6. 新链启动成功，试着发交易或是智能合约吧！
@@ -126,7 +132,7 @@ function getMinerList() constant returns(address[] vals){
 ![image](9.png)
 2. 将所有矿工的hexaddress填入minerList-dgp.sol中的minerList参数中，得到新的矿工列表。
 ![image](10.png)
-3. 编译生成minerList-dgp.sol的二进制代码，复制二进制代码，将二进制代码填入Qtum钱包中的下图位置。
+3. 编译生成minerList-dgp.sol的二进制代码，复制二进制代码，将二进制代码填入 Unita 钱包中的下图位置。
 ![image](11.png)
 ![image](12.png)
 4. 得到部署后的合约地址minerListAddress，然后调用dgp-template.sol中的setInitialAdmin()和addAddressProposal(minerListAddress, 2)函数，对新的minerListAddress进行投票。

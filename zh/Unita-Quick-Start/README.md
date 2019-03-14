@@ -7,7 +7,7 @@ Unita 以联盟链为基础，构建一主链多侧链的系统架构，结合�
 
 Unita 相应资源如下：
 
-工具：[主页](https://unita.network)、[钱包下载](https://github.com/zsrem/unitaprerelease/releases)、[网络状态](https://stats.unita.network)、[浏览器](https://explorer.unita.network)、[测试币申领](https://faucet.unita.network)、[一键发链](https://chain.unita.network)。
+工具：[主页](https://unita.network)、[钱包下载](https://github.com/UnitaNetwork/unita/releases)、[网络状态](https://stats.unita.network)、[浏览器](https://explorer.unita.network)、[水龙头](https://faucet.unita.network)、[一键发链](https://chain.unita.network)。
 
 文档：[English](https://doc.unita.network/en/)、[中文](https://doc.unita.network/zh/)。
 
@@ -16,7 +16,7 @@ Unita 相应资源如下：
 - [下载](###下载全节点钱包)
 - [运行](###运行全节点钱包)
 - [使用](###钱包使用)
-- [水龙头领币](###水龙头领币)
+- [水龙头](###水龙头)
 - [浏览器查看交易](###浏览器)
 - [查看实时网络状态](###状态显示)
 - [发送交易](###发送交易（Send）)
@@ -24,7 +24,7 @@ Unita 相应资源如下：
 
 ### 下载全节点钱包
 
-进入[Github下载链接](https://github.com/zsrem/unitaprerelease/releases),找到最新版本的 release ，根据自己的设备选择对应的客户端下载。
+进入[Github下载链接](https://github.com/UnitaNetwork/unita/releases),找到最新版本的 release ，根据自己的设备选择对应的客户端下载。
 
 ![image](1.png)
 
@@ -57,7 +57,7 @@ Unita 相应资源如下：
 
 ![image](5.png)
 
-### 水龙头领币
+### 水龙头
 
 进入[Unita水龙头](https://faucet.unita.network/)领币界面
 
