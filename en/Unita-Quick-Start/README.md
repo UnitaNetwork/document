@@ -9,7 +9,7 @@ Unita URLs are as follws：
 
 Toolkits: [Homepage](https://unita.network), [Qt-wallet download](https://github.com/zsrem/unitaprerelease/releases), [Stats](https://stats.unita.network), [Explorer](https://explorer.unita.network), [Faucet](https://faucet.unita.network), [One-click Blockchain](https://chain.unita.network).
 
-Docs: [English](../en/), [Chinese](../zh/).
+Document: [English](https://doc.unita.network/en/), [中文](https://doc.unita.network/zh/).
 
 ## Contents
 

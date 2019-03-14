@@ -9,7 +9,7 @@ Unita 相应资源如下：
 
 工具：[主页](https://unita.network)、[钱包下载](https://github.com/zsrem/unitaprerelease/releases)、[网络状态](https://stats.unita.network)、[浏览器](https://explorer.unita.network)、[测试币申领](https://faucet.unita.network)、[一键发链](https://chain.unita.network)。
 
-文档：[English](../en/)、[中文](../zh/)。
+文档：[English](https://doc.unita.network/en/)、[中文](https://doc.unita.network/zh/)。
 
 ## 目录
 
