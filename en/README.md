@@ -11,7 +11,7 @@ Document: [English](https://doc.unita.network/en/), [中文](https://doc.unita.n
 ## Roadmap
 1. Develop the blockchain system, with SCAR consensus. (Done)
 2. Build related tools, including Stats, Explorer, Faucet, One-click Blockchain and etc.. (Done)
-3. Develop a demo kit, to show how to build business applications based on Unita. (Doing)
+3. Develop application templates, to show how to build business applications based on Unita. (Doing)
 4. Upload Unita to cloud service providers, like AWS and Google Cloud, to make the system deployment more convenient. (Todo)
 5. Develop the cross-chain solution, Canal. (Todo)
 6. Develop the data management solution, DDAO. (Todo)

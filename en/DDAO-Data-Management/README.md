@@ -64,6 +64,9 @@ Based on DDAO, you can build a trading platform like Taobao and Amazon. When a m
 ## Decentralized Cloud Storage Service
 Storage service providers register their information into a blockchain or a database via DDAO. When a user uploads a file, he needs to use blockchain tokens to purchase the service, and then uploads the file to a decentralized file system through DDAO, while the file information and address are stored in a smart contract or a database. When downloading, users browse the file information and address by using DDAO, and then download the file from the file system. The tokens consumed by the user are used to reward storage service providers, forming a complete economic ecology.
 
+# Implementation
+We plan to implement DDAO in the future. For more details, please refer to the roadmap.
+
 # Summary
 Decentralized data management has broad application prospects. Although, at present, decentralized databases and file systems are still under development, and immature infrastructure limits its application, it is conceivable that these systems will be implemented one after another in the near future. DDAO will also be widely used just like the DAO in current centralized systems.
 

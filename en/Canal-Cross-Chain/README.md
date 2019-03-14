@@ -103,6 +103,9 @@ Based on the principles above, the logic of the conversion can have various desi
 3. It can be seen that Δb is an increasing function of b0 and is a decreasing function of a0, which is in accordance with above principle 1.
 4. It also can be seen that △b < b0, the currency B in the fund pool will not be used up, which is in accordance with above principle 2.
 
+# Implementation
+We plan to implement Canal in the future. For more details, please refer to the roadmap.
+
 # Summary
 In the design process, we got two thoughts. First, we realize that we shouldn't over-emphasize decentralization and sacrifice the efficiency of the trading process; because if the trading process is too slow, it will affect the user experience; and the need of decentralization in a consortium blockchain system can also be satisfied through voting for trusted super nodes. Second, the mode of automatic pricing is significantly better than order matching in actual usage, because for many new cryptocurrencies, the trading liquidity cannot be guaranteed, and the automatic pricing trading model effectively solves this problem.
 

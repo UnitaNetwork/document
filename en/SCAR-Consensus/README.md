@@ -105,6 +105,9 @@ However, the super-node mode of the consortium blockchain also faces a problem: 
 
 ![image](3.png)
 
+# Implementation
+SCAR is implemented in the current version of Unita. Its strategy is that, only when there are unconfirmed transactions in the network, new block will be generated. We plan to improve it afterwards according to its performance in actural usage.
+
 # Conclusion
 
 While ensuring the performance of the blockchain, SCAR saves network bandwidth and hard disk consumption as much as possible by adjusting the parameters on the blockchain dynamically. It is more efficient and flexible than other consensus algorithms, and has more advantages in large-scale commercial applications.
