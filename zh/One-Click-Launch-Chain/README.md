@@ -53,7 +53,7 @@
 ![image](3.png)
 2. 执行getpoaminerlist，查看矿工列表。
 3. 执行importprivkey命令，导入矿工的私钥。
-4. 执行setpoaminer命令，开始使用矿工账户挖矿。每次节点重启后需要运行该命令开启挖矿。setpoaminer命令支持选择共识机制（[SCAR共识机制](https://doc.unita.network/zh/SCAR-Consensus/）):
+4. 执行setpoaminer命令，开始使用矿工账户挖矿。每次节点重启后需要运行该命令开启挖矿。setpoaminer命令支持选择共识机制（[SCAR共识机制](https://doc.unita.network/zh/SCAR-Consensus/)）:
 ```
 setpoaminer "address" "greedy"or null  // 采用PoA共识算法
 setpoaminer "address" "scar" // 采用SCAR共识算法
