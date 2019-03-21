@@ -66,7 +66,7 @@ The advantage of this cross-chain solution is that it's completely decentralized
 
 # Algorithm Introduction
 This paper presents a decentralized cross-chain cryptocurrency trading solution. The trading process is completed by a consortium blockchain network with multiple smart contracts. Take such a scenario as an example: a cryptocurrency on side-chain A needs to be exchanged with another cryptocurrency on sidechain B. The trading process is completed through the main chain as a relay.
-
+![image](1.png)
 ## Main Chain
 The main chain uses a consortium blockchain. Super nodes of the consortium blockchain are voted through all users or by any other method. Super nodes are responsible for verifying all transactions on the blockchain and generating new blocks. The main chain connects to all side-chains that need to be traded, ensuring data can be transmitted among chains. Meanwhile, the main chain is responsible for running the required smart contracts. Details of this solution will be described below. 
 
