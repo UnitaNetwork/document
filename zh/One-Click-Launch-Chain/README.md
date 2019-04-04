@@ -49,7 +49,7 @@
 
 ## 启动私链
 我们生成了一个名为xunita的链（[链接](https://chain.unita.network/#/chain/view?chainId=xunita)），按以下步骤启动该链。
-1. 使用 unitad -chain=x 或是 在unita-qt中如下图配置重启后，启动名为xunita的链。
+1. 使用 unitad -chain=xunita 或是 在unita-qt中如下图配置重启后，启动名为xunita的链。
 ![image](3.png)
 2. 执行getpoaminerlist，查看矿工列表。
 3. 执行importprivkey命令，导入矿工的私钥。

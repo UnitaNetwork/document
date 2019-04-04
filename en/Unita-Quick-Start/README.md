@@ -13,13 +13,13 @@ Document: [English](https://doc.unita.network/en/), [中文](https://doc.unita.n
 
 ## Contents
 
-- [Download](###Download full node wallet)
-- [Run Wallet](###Run Wallet)
-- [Use Wallet](###Use Wallet)
-- [Get UNT through faucet](###Faucet)
-- [Check transactions in Unita Explorer](###Blockchain Explorer)
-- [View Stats of Unita network](###Unita Blockchain Stats)
-- [Send Transactions](###Send Transactions)
+- [Download](#download-full-node-wallet)
+- [Run Wallet](#run-wallet)
+- [Use Wallet](#use-wallet)
+- [Get UNT through faucet](#Faucet)
+- [Check transactions in Unita Explorer](#Blockchain-explorer)
+- [View Stats of Unita network](#Unita-blockchain-stats)
+- [Send Transactions](#Send-transactions)
 
 
 ### Download full node wallet
