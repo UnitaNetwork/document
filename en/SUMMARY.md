@@ -1,5 +1,6 @@
 ## Introduction
 * [Unita Introduction](README.md)
+* [Benchmark](Benchmark-Test/README.md)
 
 ## White Paper
 * [Unita White Paper (pdf)](ref://en/Whitepaper/unita_whitepaper.pdf)
@@ -8,7 +9,6 @@
 * [SCAR: Scalable Consensus Algorithm](SCAR-Consensus/README.md)
 * [Canal: A Cross-chain Trading Solution](Canal-Cross-Chain/README.md)
 * [DDAO: Decentralized Data Access Object](DDAO-Data-Management/README.md)
-* [Unita Benchmark Test](Benchmark-Test/README.md)
 
 ## Tutorial
 * [Unita Quick Start](Unita-Quick-Start/README.md)
