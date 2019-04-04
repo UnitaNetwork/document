@@ -5,7 +5,7 @@ Many cryptocurrencies have emerged with the development of the blockchain techno
 
 Currently most decentralized exchanges realize trading of tokens on the same blockchain, rather than cross-chain trading. It limits application scenarios of the decentralized exchange. This paper proposes a decentralized cryptocurrency exchange solution that enables cross-chain cryptocurrency trading. Here we only describe its basic idea and the design and development are still in process.
 
-We name this solution, **Canal**, because the canal realizes transportation and trading of goods among multiple cities. The original intention is that, after a user launches his own blockchain using the [One-Click Blockchain](https://chain.unita.network) service, he can use this solution to exchange his cryptocurrency with other blockchains, so as to facilitate cryptocurrency circulation.
+We name this solution, **Canal**, because the canal realizes transportation and trading of goods among multiple cities. The original intention is that, after a user launches his own blockchain using the [One-click Blockchain](https://chain.unita.network) service, he can use this solution to exchange his cryptocurrency with other blockchains, so as to facilitate cryptocurrency circulation.
 
 # Related Works
 ## Decentralized Exchange

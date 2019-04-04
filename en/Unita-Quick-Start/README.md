@@ -1,7 +1,7 @@
 # Unita Quick Start
 Unita is the blockchain service provider based on open source project Qtum, provides enterprise application solutions that can be customized in various industries.
 
-Unita is based on consortium blockchain, builds a main chain with many side-chains system architecture, integrate one-click-blockchain, cross-chain transaction, data management and other modules and diversified supporting tools to form a one-stop blockchain enterprise service.
+Unita is based on consortium blockchain, builds a main chain with many side-chains system architecture, integrate one-click blockchain, cross-chain transaction, data management and other modules and diversified supporting tools to form a one-stop blockchain enterprise service.
 
 We provide various services such as Unita full node wallet, faucet to get airdrop of UNT, blockchain explorer and blockchain stats,etc, to help you to use Unita.
 
