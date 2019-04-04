@@ -12,4 +12,4 @@
 ## 使用教程
 * [Unita快速开始](Unita-Quick-Start/README.md)
 * [Unita一键发链教程](One-Click-Launch-Chain/README.md)
-* [Unita 应用模板](Application-Template/README.md)
+* [Unita应用模板](Application-Template/README.md)

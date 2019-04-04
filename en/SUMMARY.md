@@ -1,6 +1,6 @@
 ## Introduction
 * [Unita Introduction](README.md)
-* [Benchmark](Benchmark-Test/README.md)
+* [Unita Benchmark](Benchmark-Test/README.md)
 
 ## White Paper
 * [Unita White Paper (pdf)](ref://en/Whitepaper/unita_whitepaper.pdf)

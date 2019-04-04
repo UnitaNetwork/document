@@ -1,4 +1,4 @@
-# Application Template
+# Unita Application Template
 
 ## Coming Soon!
 
