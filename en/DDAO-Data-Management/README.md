@@ -5,26 +5,26 @@ Data Management refers to the process of collecting, organizing, storing, proces
 
 At present, enterprises mainly use centralized databases and file systems for data management. Large Internet companies develop their own systems, such as GFS (Google File System), SQL Server, etc., and deploy local services. Small and medium-sized companies connect to cloud services such as AWS, Aliyun, and delegate data management tasks to these third parties. Local and cloud data services have their own application scenarios and they maintain the basic data of many companies.
 
-Centralized storage is currently the main solution to data management, but there are serious storage problems in centralized databases and file systems around the world. Enterprises often store all their data and files in centralized databases and file systems. But centralized storage solutions often attract attacks from hackers, or they may be ruined by an accident. Enterprises sometimes have to face the loss of all their data resources and never get them back. Some business highly relys on data and such kind of loss may lead to huge risks. Although cloud service providers would promise to do data backup, but it has not solved the fundamental problem.
+Centralized storage is currently the main solution to data management, but there are serious storage problems in centralized databases and file systems around the world. Enterprises often store all their data and files in centralized databases and file systems. But centralized storage solutions often attract attacks from hackers, or they may be ruined by an accident. Enterprises sometimes have to face the loss of all their data resources and never get them back. Some business are highly reliant on data and such a loss may lead to huge risks. Although cloud service providers would promise to backup data, this has not solved the fundamental problem.
 
-Decentralization technologies, such as blockchain and IPFS, provide a new type of solutions to data management. By using encryption and consensus, data privacy and security are guaranteed. Since data are stored in a lot of nodes, there is no need to worry about data loss caused by failure of one single node, which improves security and reliability. Encryption and segmentation technologies control the read access and guarantee data privacy. At the same time, in order to ensure scalability, cluster technology is used. A cluster is a large group of nodes that store and manage data together, and it allows new nodes to join or expanding more clusters.
+Decentralization technologies, such as blockchain and IPFS (InterPlanetary File System), provide a new type of solution to data management. By using encryption and consensus, data privacy and security are guaranteed. Since data are stored in many nodes, there is no need to worry about data loss caused by failure of one single node, which improves security and reliability. Encryption and segmentation technologies control the read access and guarantee data privacy. At the same time, in order to ensure scalability, cluster technology is used. A cluster is a large group of nodes that store and manage data together, and it allows new nodes to join or expanding more clusters.
 
 However, at present, with the increasing number of decentralized systems, developers have to face high costs in selection, learning, development, deployment, and maintenance of these systems. Therefore we proposed the DDAO (Decentralized Data Access Object). Our goal is to develop a common library to access various decentralized systems with uniform interfaces, so as to perform CRUD (Create, Read, Update, Delete) operations. Through this library, developers can quickly read and write data in various decentralized systems and build their own applications without having to care about the underlying technology.
 
 # Related Work
-With the development of blockchain technology and digital currency market, decentralized data storage and management technologies receive attentions from research fields and investment markets.
+With the development of blockchain technology and digital currency market, decentralized data storage and management technologies receive attention from researchers and athe investment market.
 
 ## Decentralized File System
-As a decentralized system, blockchain backs up data at every node, so it is not suitable for storing large-size files, such as pictures, videos and audios. In current blockchain applications, such kind of files are still stored in servers held by developers. This way leads to the centralization of these applications, which violates the essential meaning of blockchain.
+As a decentralized system, blockchain backs up data at every node, so it is not suitable for storing large-size files, such as pictures, videos and audios. In current blockchain applications, these kind of files are still stored in servers provided by the developers. This leads to the centralization of these applications, which violates the essential meaning of blockchain.
 
-Decentralized file systems mainly include IPFS (InterPlanetary File System) [1], Swarm [2], Storj [3], and so on. Their basic method is to split the uploaded file into small pieces and then store them into nodes. When downloading the file, you can use the hash value of the file as an address to make a request to a node, and then you will get all the data pieces from the node and combine them into the whole file. In this way, one file can be separately stored in many nodes in a network, which achieves decentralization.
+Decentralized file systems mainly include IPFS [1], Swarm [2], Storj [3], and so on. Their basic method is to split the uploaded file into small pieces and then store them into nodes. When downloading the file, you can use the hash value of the file as an address to make a request to a node, and then you will get all the data pieces from the node and combine them into the whole file. In this way, one file can be separately stored in many nodes in a network, which achieves decentralization.
 
 One problem with these technologies is how to keep more nodes online to provide download services. Hence, some projects propose to add node incentive mechanisms to the decentralized file system so that online nodes can obtain revenues. In this way, the decentralized file system becomes a cloud storage service, in which users need to purchase the service during uploading and downloading processes so as to reward the nodes that provide the storage service. Several typical projects include Filecoin [4], Wolk [5], Fluence [6], and Sia [7].
 
 # Decentralized Database
-The decentralized file system enables decentralized storage of data, but after the data are uploaded, they cannot be further modified or retrieved, which limits its application in data management. Traditional centralized data management services usually use database systems such as MySQL or Redis to execute CRUD operations of data. Therefore, similar database services are required in the decentralized area.
+The decentralized file system enables decentralized storage of data, but after the data is uploaded, they cannot be further modified or retrieved, which limits its application in data management. Traditional centralized data management services usually use database systems such as MySQL or Redis to execute CRUD operations of data. Therefore, similar database services are required in the decentralized area.
 
-There are several projects having research on decentralized databases, including BigchainDB [8], Bluzelle [9], Ties.DB [10] and so on. Their basic idea is to upload database write requests to the blockchain through transactions, and then use database engines such as MongoDB to perform data indexing and process read requests. Using blockchain to build decentralized databases, effectively utilizes the mature decentralized architecture of blockchain systems, and has great advantages in stability and security.
+There are several projects researching decentralized databases, including BigchainDB [8], Bluzelle [9], Ties.DB [10] and so on. Their basic idea is to upload database write requests to the blockchain through transactions, and then use database engines such as MongoDB to perform data indexing and process read requests. Using blockchain to build decentralized databases, effectively utilizes the mature decentralized architecture of blockchain systems, and has great advantages in stability and security.
 
 These projects are currently in their initial stages, and before their implementations mature, using smart contracts as a database service is also a viable alternative. Some projects are based on Ethereum + IPFS to develop their applications, using smart contracts written by Solidity for data management. Solidity supports data structures such as List, Map, Struct, etc., which are sufficient for common data management scenarios. These items are fully enumerated in [11].
 
@@ -56,13 +56,13 @@ Multiple DDAO instances can be initiated within one DApp, in order to connect to
 A large number of application scenarios is the best way to describe the value of DDAO. Based on DDAO, many decentralized applications will become easy to develop and implement.
 
 ## Decentralized Content Sharing
-DDAO can be used to build a blog, photo, music, video sharing platform. By using DDAO's write interfaces, users can publish texts, images, videos and other content to a decentralized file system such as IPFS, and then store their meta data (such as content address, release time, user ID, etc.) into a smart contract or a database. The DDAO read interfaces are used to filter, sort, and display the content. The advantage of such system is that the contents published by users is decentralized and cannot be tampered with.
+DDAO can be used to build a blog, photo, music, or video sharing platform. By using DDAO's write interfaces, users can publish texts, images, videos and other content to a decentralized file system such as IPFS, and then store their metadata (such as content address, release time, user ID, etc.) into a smart contract or a database. The DDAO read interfaces are used to filter, sort, and display the content. The advantage of such system is that the content published by users is decentralized and cannot be tampered with.
 
 ## Decentralized Trading Platform
-Based on DDAO, you can build a trading platform like Taobao and Amazon. When a merchant uses DDAO write interfaces to upload its product information, the text and image are stored in a decentralized file system, and the meta data (such as price, quantity, classification, keywords, etc.) are stored in a smart contract or a database. When a customer browses the platform, DDAO read interfaces are used to search and filter products. Finally, the customer uses DDAO to connect to the blockchain to create orders, pay orders, and complete orders. The advantage of this platform is that the product information and transaction process are transparent and the payment process is convenient.
+Based on DDAO, you can build a trading platform like Taobao and Amazon. When a merchant uses DDAO write interfaces to upload its product information, the text and image are stored in a decentralized file system, and the metadata (such as price, quantity, classification, keywords, etc.) are stored in a smart contract or a database. When a customer browses the platform, DDAO read interfaces are used to search and filter products. Finally, the customer uses DDAO to connect to the blockchain to create orders, pay orders, and complete orders. The advantage of this platform is that the product information and transaction process are transparent and the payment process is convenient.
 
 ## Decentralized Cloud Storage Service
-Storage service providers register their information into a blockchain or a database via DDAO. When a user uploads a file, he needs to use blockchain tokens to purchase the service, and then uploads the file to a decentralized file system through DDAO, while the file information and address are stored in a smart contract or a database. When downloading, users browse the file information and address by using DDAO, and then download the file from the file system. The tokens consumed by the user are used to reward storage service providers, forming a complete economic ecology.
+Storage service providers register their information into a blockchain or a database via DDAO. When a user uploads a file, they need to use blockchain tokens to purchase the service, and then upload the file to a decentralized file system through DDAO, while the file information and address are stored in a smart contract or a database. When downloading, users browse the file information and address by using DDAO, and then download the file from the file system. The tokens consumed by the user are used to reward storage service providers, forming a complete economic ecology.
 
 # Implementation
 We plan to implement DDAO in the future. For more details, please refer to the roadmap.
@@ -71,24 +71,24 @@ We plan to implement DDAO in the future. For more details, please refer to the r
 Decentralized data management has broad application prospects. Although, at present, decentralized databases and file systems are still under development, and immature infrastructure limits its application, it is conceivable that these systems will be implemented one after another in the near future. DDAO will also be widely used just like the DAO in current centralized systems.
 
 # References
-[1] IPFS. https://ipfs.io/.
+[1] IPFS. https://ipfs.io/
 
-[2] Swarm. https://swarm-guide.readthedocs.io/en/latest/.
+[2] Swarm. https://swarm-guide.readthedocs.io/en/latest/
 
-[3] Storj. https://storj.io/.
+[3] Storj. https://storj.io/
 
-[4] Filecoin. https://filecoin.io/.
+[4] Filecoin. https://filecoin.io/
 
-[5] Wolk. https://wolk.com/.
+[5] Wolk. https://wolk.com/
 
-[6] Fluence. https://fluence.one/.
+[6] Fluence. https://fluence.one/
 
-[7] Sia. https://sia.tech/.
+[7] Sia. https://sia.tech/
 
-[8] BigchainDB. https://www.bigchaindb.com/.
+[8] BigchainDB. https://www.bigchaindb.com/
 
-[9] Bluzelle. https://bluzelle.com/.
+[9] Bluzelle. https://bluzelle.com/
 
-[10] Ties.DB. https://tiesdb.com/.
+[10] Ties.DB. https://tiesdb.com/
 
-[11] Awesome IPFS. https://awesome.ipfs.io/.
+[11] Awesome IPFS. https://awesome.ipfs.io/
