@@ -23,7 +23,7 @@ Document: [English](https://doc.unita.network/en/), [中文](https://doc.unita.n
     - [Commandline Wallet](#commandline-wallet)
         - [Download Commandline Wallet](#download-commandline-wallet)
         - [Run Commandline Wallet](#run-commandline-wallet)
-        - [Unita-cli Usage](#unita-cli-ssage)
+        - [Unita-cli Usage](#unita-cli-usage)
 - [Usage](#usage)
     - [Faucet](#faucet)
     - [Blockchain Explorer](#blockchain-explorer)
