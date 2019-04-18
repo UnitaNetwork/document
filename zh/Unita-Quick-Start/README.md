@@ -11,25 +11,34 @@ Unita 相应资源如下：
 
 文档：[English](https://doc.unita.network/en/)、[中文](https://doc.unita.network/zh/)。
 
-## 目录
-
+# 目录
 - [Unita 快速开始](#unita-快速开始)
 - [目录](#目录)
-- [下载全节点钱包](#下载全节点钱包)
-- [运行全节点钱包](#运行全节点钱包)
+- [钱包安装](#钱包安装)
+    - [QT 钱包](#qt-钱包)
+        - [下载 QT 全节点钱包](#下载-qt-全节点钱包)
+        - [运行 QT 全节点钱包](#运行-qt-全节点钱包)
+    - [命令行钱包](#命令行钱包)
+        - [下载命令行钱包](#下载命令行钱包)
+        - [运行命令行钱包](#运行命令行钱包) 
+        - [使用 unita-cli](#使用-unita-cli)
 - [钱包使用](#钱包使用)
-- [水龙头](#水龙头)
-- [浏览器](#浏览器)
-- [状态显示](#状态显示)
-- [发送交易（Send）](#发送交易send)
+    - [水龙头](#水龙头)
+    - [浏览器](#浏览器)
+    - [状态显示](#状态显示)
+    - [发送交易（Send）](#发送交易send)
+# 钱包安装
 
-### 下载全节点钱包
+## QT 钱包
+---
 
-进入[Github下载链接](https://github.com/UnitaNetwork/unita/releases),找到最新版本的 release ，根据自己的设备选择对应的客户端下载。
+### 下载 QT 全节点钱包
+
+进入[Github下载链接](https://github.com/UnitaNetwork/unita/releases),找到最新版本的 release ，根据自己的设备选择对应的客户端下载（如 mac 可选择 .dmg 格式）。
 
 ![image](1.png)
 
-### 运行全节点钱包
+### 运行 QT 全节点钱包
 
 我们下载完成后安装全节点钱包，安装完毕后打开。没有全节点数据的用户打开后，如下图所示，客户端会让您选择区块链数据路径，您可以使用默认路径也可自定义数据路径。
 
@@ -39,7 +48,46 @@ Unita 相应资源如下：
 
 ![image](3.png)
 
-### 钱包使用
+## 命令行钱包
+---
+### 下载命令行钱包
+
+若要使用命令行钱包，则进入[Github下载链接](https://github.com/UnitaNetwork/unita/releases),找到最新版本的 release，选择对应的压缩包来下载并解压（例如 mac 可以选择 osx64.tar.gz）。
+
+### 运行命令行钱包
+
+下载好对应的钱包并解压，随后可在命令行中进入所在目录，启动 unitad 来启动钱包:
+```
+$ cd unita-0.16.0/bin
+$ ./unitad
+```
+您可以在 unitad 下使用 -h 命令来获取您想要的 option 设置：
+![image](19.png)
+
+常用的设置：
+```
+-chain=<chainid>  // 选择您想要接入的区块链
+-daemon  //  后台运行 unitad
+-datadir=<dir>  //  指定区块数据的存储位置
+-rpcuser=<user>  //  rpc 接口的 username
+-rpcpassword=<pw>  //  rpc 接口的 password
+```
+其他的命令及其功能您可以通过 ./unitad -h 来获得。
+
+### 使用 unita-cli 
+unita-cli 是与全节点交互的客户端，可以通过 unita-cli 来向全节点发送各种请求，可以进入 unitad-cli 所在目录来调用,我们以 getblockchaininfo 命令为例：
+```
+$ cd unita-0.16.0/bin
+$ ./unitad -daemon -rpcuser=unita -rpcpassword=unita -rpcport=13889
+$ ./unita-cli -rpcuser=unita -rpcpassword=unita -rpcport=13889 getblockchaininfo
+```
+全节点钱包的 rpc 接口将返回对应的结果：
+![image](20.png)
+
+您可以在 unita-cli 下使用 help 命令来查看所有的 RPC 请求，并可以看到所有接口的返回值及其含义:
+![image](21.png)
+
+# 钱包使用
 
 如果您拥有 Unita 代币 UNT，且拥有对应地址的私钥，您可打开 Help/Debug Window，打开 Console，输入命令 importprivkey "unitaprivkey" 来导入私钥，如下图所示：
 
@@ -58,7 +106,7 @@ Unita 相应资源如下：
 
 ![image](5.png)
 
-### 水龙头
+## 水龙头
 
 进入[Unita水龙头](https://faucet.unita.network/)领币界面
 
@@ -89,9 +137,9 @@ Unita 水龙头采用社交媒体 Twitter 和 新浪微博分享的方式申领 
 
 Twitter 用户操作与微博相同
 
-注意：为了防止 UNT 的恶意过度申领，我们采取了社交媒体加验证码的验证模式，同时限制了申领数量，每次申领成功会获得50枚 UNT，一个社交媒体账号在24小时内只能申领一次，但允许同一个 Unita 地址通过不同的社交账号申领。
+注意：为了防止 UNT 的恶意过度申领，我们采取了社交媒体加验证码的验证模式，同时限制了申领数量，每次申领成功会获得6枚 UNT，一个社交媒体账号在24小时内只能申领一次，但允许同一个 Unita 地址通过不同的社交账号申领。
 
-### 浏览器
+## 浏览器
 
 从水龙头获取到代币后，您可以在[浏览器界面](https://explorer.unita.network/)查看您的账户状态以及交易信息。
 ![image](14.png)
@@ -102,14 +150,14 @@ Twitter 用户操作与微博相同
 同时您可以在浏览器中查看每个区块的具体信息，查看在智能合约中发行的代币，我们还提供了丰富的图表以供大家查看区块链网络的整体状态，富豪榜和挖矿榜来查看地址余额排名和挖矿地址状态，也可通过"Send Raw Transaction"直接发送交易
 ![image](16.png)
 
-### 状态显示
+## 状态显示
 
 您可以在[状态显示界面](https://stats.unita.network/)查看当前 Unita 主网网络参数与状态，其中包括最新区块高度、区块大小、tps等等信息，也可观察网络中的节点状态
 ![image](17.png)
 
 ![image](18.jpeg)
 
-### 发送交易（Send）
+## 发送交易（Send）
 
 在 QT 钱包的 Send 界面可以发送交易实现转账，向指定的 Unita 地址发送指定数量的 UNT
 

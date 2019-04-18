@@ -1,4 +1,5 @@
 # Unita Quick Start
+
 Unita is the blockchain service platform based on the open source Qtum Project and provides enterprise application solutions that can be customized in various industries.
 
 Unita is a consortium blockchain, builds a main chain with many side-chains for its system architecture, and provides one-click blockchain, cross-chain transaction, data management, and other modules and diversified supporting tools to form a one-stop blockchain enterprise solution.
@@ -11,28 +12,37 @@ Toolkits: [Homepage](https://unita.network), [Qt-wallet download](https://github
 
 Document: [English](https://doc.unita.network/en/), [中文](https://doc.unita.network/zh/).
 
-## Contents
+# Contents
 
 - [Unita Quick Start](#unita-quick-start)
 - [Contents](#contents)
-- [Download Full Node Wallet](#download-full-node-wallet)
-- [Run Wallet](#run-wallet)
-- [Use Wallet](#use-wallet)
-- [Faucet](#faucet)
-- [Blockchain Explorer](#blockchain-explorer)
-- [Unita Blockchain Stats](#unita-blockchain-stats)
-- [Send Transactions](#send-transactions)
+- [Wallet Installation](#installation)
+    - [QT Wallet](#qt-wallet)
+        - [Download QT Full Node wallet](#download-qt-full-node-wallet)
+        - [Run QT Wallet](#run-qt-wallet)
+    - [Commandline Wallet](#commandline-wallet)
+        - [Download Commandline Wallet](#download-commandline-wallet)
+        - [Run Commandline Wallet](#run-commandline-wallet)
+        - [Unita-cli Usage](#unita-cli-ssage)
+- [Usage](#usage)
+    - [Faucet](#faucet)
+    - [Blockchain Explorer](#blockchain-explorer)
+    - [Unita Blockchain Stats](#unita-blockchain-stats)
+    - [Send Transactions](#send-transactions)
 
+# Installation
 
-### Download Full Node wallet
+## QT Wallet
+---
+### Download QT Full Node wallet
 
 Find the latest release in [GitHub](https://github.com/UnitaNetwork/unita/releases) and download wallet according to your device.
 
 ![image](1.png)
 
-### Run Wallet
+### Run QT Wallet
 
-Download, install and run the full node wallet. It will display the welcome window below for the initial installation. You can choose the default data directory or a custom data directory.
+Download, install and run the full node wallet. It will display the welcome window below for the initial installation. You can choose the default data directory or a custom data directory(for example, macOS can choose osx-unsigned.dmg)
 
 ![image](2.png)
 
@@ -40,7 +50,47 @@ Click 'OK' to launch the Qt wallet. The wallet will connect nodes of Unita main 
 
 ![image](3.png)
 
-### Use Wallet
+## Commandline Wallet
+---
+
+### Download Commandline Wallet
+To use the command line wallet, find the latest release in [GitHub](https://github.com/UnitaNetwork/unita/releases) and select the corresponding zip file to download and unzip it(for example, mac can choose osx64.tar.gz).
+
+### Run Commandline Wallet 
+Enter the corresponding directory in the command line and start the wallet with unitad command:
+```
+$ cd unita-0.16.0/bin
+$ ./unitad
+```
+You can use the -h command under unitad to get the option settings you want:
+![image](19.png)
+
+Common settings:
+```
+-chain=<chainid>  // Blockchain id you want to connect
+-daemon  //   Run in the background as a daemon and accept commands
+-datadir=<dir>  //  Specify data directory
+-rpcuser=<user>  //  username for rpc
+-rpcpassword=<pw>  //  password for rpc
+```
+Other commands and their functions can be obtained with ./unitad -h.
+
+### Unita-cli Usage
+
+Unita-cli is a client that interacts with full node wallet. You can send various requests to the wallet through unita-cli. We use the getblockchaininfo command as an example:
+```
+$ cd unita-0.16.0/bin
+$ ./unitad -daemon -rpcuser=unita -rpcpassword=unita -rpcport=13889
+$ ./unita-cli -rpcuser=unita -rpcpassword=unita -rpcport=13889 getblockchaininfo
+```
+Rpc interface of the full node wallet will return the corresponding result:
+
+![image](20.png)
+
+All RPC requests and meaning of their return values can be obtained with ./unita-cli help:
+![image](21.png)
+
+# Usage
 
 If you have the private key of a Unita address that holds UNT, you can open Console in Help/Debug Window and use the command "importprivkey 'unitaprivkey'" to import your address to the wallet.
 
@@ -59,7 +109,7 @@ The QT wallet will display some information such as balances on the My Wallet pa
 
 ![image](5.png)
 
-### Faucet
+## Faucet
 
 Enter [Unita Faucet](https://faucet.unita.network/) homepage.
 
@@ -91,7 +141,7 @@ You can get UNT with a Sina Weibo URL in the same way.
 
 To rate limit the airdrop of UNT from the Faucet, we adopted the verification of social media plus verification code and limited the number of requests. Each successful airdrop request will receive 50 UNTs, and a social media account can only apply once within 24 hours. Meanwhile, we allow the same Unita address to be claimed through different social accounts.
 
-### Blockchain Explorer
+## Blockchain Explorer
 
 After you have received UNT you can watch the status of your Unita addresses and details of transactions on the blockchain using the [Explorer](https://explorer.unita.network/).
 
@@ -105,7 +155,7 @@ You can also see detailed information about each block, tokens launched, and sma
 
 ![image](16.png)
 
-### Unita Blockchain Stats
+## Unita Blockchain Stats
 
 You can view stats and status of Unita main network in [Stats page](https://stats.unita.network/), which includes best block height, best block size, TPS (Transactions Per Second) and so on. Status of Supernodes (miners) in the Unita network is also available.
 
@@ -114,7 +164,7 @@ You can view stats and status of Unita main network in [Stats page](https://stat
 ![image](18.jpeg)
 
 
-### Send Transactions
+## Send Transactions
 
 You can send UNT using the Send menu selection to send an amount of UNTs to a specific Unita address.
 
