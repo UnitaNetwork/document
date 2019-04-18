@@ -139,7 +139,7 @@ Paste the URL into the Faucet page field and click "Get Unita", then use the Exp
 
 You can get UNT with a Sina Weibo URL in the same way. 
 
-To rate limit the airdrop of UNT from the Faucet, we adopted the verification of social media plus verification code and limited the number of requests. Each successful airdrop request will receive 50 UNTs, and a social media account can only apply once within 24 hours. Meanwhile, we allow the same Unita address to be claimed through different social accounts.
+To rate limit the airdrop of UNT from the Faucet, we adopted the verification of social media plus verification code and limited the number of requests. Each successful airdrop request will receive 6 UNTs, and a social media account can only apply once within 24 hours. Meanwhile, we allow the same Unita address to be claimed through different social accounts.
 
 ## Blockchain Explorer
 
